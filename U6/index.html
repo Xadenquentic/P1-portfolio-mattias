@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Flex & Grid - CSS Layout Guide</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏠 Flex & Grid</div>
+            <ul class="nav-menu">
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#produkter">Produkter</a></li>
+                <li><a href="#om-oss">Om oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Grid -->
+    <main class="main-grid">
+        <!-- Left Content Section -->
+        <section class="content-section">
+            <h1>Ska jag använda Flexbox eller CSS Grid?</h1>
+            
+            <p>
+                Flexbox och CSS Grid är två metoder för att bygga upp en layout med CSS. 
+                De jämförs ofta med varandra, trots att det är ganska stor skillnad mellan 
+                Flexbox och CSS Grid. I den här artikeln delar jag med mig av fördelar och 
+                nackdelar med de båda metoderna. <a href="https://www.w3schools.com/css/css_grid.asp" class="inline-link">Läs mer här</a>.
+            </p>
+
+            <h2>För- & nackdelar med Flexbox</h2>
+            <ul>
+                <li>Flexbox är bra för att strukturera innehållet (rubriker, stycken, länkar m.m.) i olika element (containers, sidhuvud, brödtext, m.m.)</li>
+                <li>Bra för endimensionella element, det vill säga element som ska riktas åt ett håll. Flexbox bör användas om man vill skapa element som antingen går på en rad eller i en spalt</li>
+                <li>Flexbox är inte det bästa valet för tvådimensionella element</li>
+                <li>Med Flexbox skriver man mindre kod än med CSS Grid</li>
+                <li>Bra om man behöver lite mer "självständiga flexbarn" som kan ha olika storlekar</li>
+            </ul>
+
+            <h2>För- & nackdelar med CSS Grid</h2>
+            <p>
+                CSS Grid kan vara förvirrande på grund av dess tvådimensionalitet. 
+                Grid är mer strikt mot sina children (element) alltså parent-taggen 
+                bestämmer mycket hur child-taggarna kommer se ut. Grid är perfekt för 
+                att skapa <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" class="inline-link">komplexa layouter</a> med rader och kolumner.
+            </p>
+        </section>
+
+        <!-- Right Visual Section -->
+        <section class="visual-section">
+            <!-- Flexbox Diagram -->
+            <div class="diagram-container">
+                <h3>FLEXBOX</h3>
+                <div class="flexbox-demo">
+                    <div class="flex-header">
+                        <div class="flex-logo">LOGO</div>
+                        <div class="flex-menu">
+                            <span>MENY</span>
+                            <span>MENY</span>
+                            <span>MENY</span>
+                            <span>MENY</span>
+                            <span>MENY</span>
+                        </div>
+                    </div>
+                    <div class="flex-body">
+                        <div class="flex-sidebar">
+                            <div class="flex-box">
+                                <span>RUBRIK 1</span>
+                                <div class="text-box">TEXT</div>
+                            </div>
+                            <div class="flex-box">
+                                <span>RUBRIK 2</span>
+                                <div class="text-box">TEXT</div>
+                            </div>
+                            <div class="flex-box">
+                                <span>RUBRIK 3</span>
+                                <div class="text-box">TEXT</div>
+                            </div>
+                        </div>
+                        <div class="flex-main">
+                            <span>HUVUDCONTAINER</span>
+                        </div>
+                    </div>
+                    <div class="flex-footer">
+                        <div class="footer-item">
+                            <span>RUBRIK 1</span>
+                            <div class="image-box">BILD</div>
+                        </div>
+                        <div class="footer-item">
+                            <span>RUBRIK 2</span>
+                            <div class="image-box">BILD</div>
+                        </div>
+                        <div class="footer-item">
+                            <span>RUBRIK 3</span>
+                            <div class="image-box">BILD</div>
+                        </div>
+                    </div>
+                    <div class="flex-bottom">SIDFOT</div>
+                </div>
+            </div>
+
+            <!-- CSS Grid Diagram -->
+            <div class="diagram-container">
+                <h3>CSS GRID</h3>
+                <div class="grid-demo">
+                    <div class="grid-header">HEADER</div>
+                    <div class="grid-sidebar">SIDEBAR</div>
+                    <div class="grid-main">MAIN CONTENT</div>
+                    <div class="grid-footer">FOOTER</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Movies Section -->
+    <section class="movies-section">
+        <h2>Filmer om CSS Grid och Flexbox</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <h3>CSS Grid Tutorial</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/EiNiSFIPIQE" 
+                            title="CSS Grid Tutorial" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>En grundlig genomgång av CSS Grid och dess möjligheter för att skapa moderna layouter.</p>
+            </div>
+
+            <div class="movie-card">
+                <h3>Flexbox Complete Guide</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JJSoEo8JSnc" 
+                            title="Flexbox Tutorial" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Lär dig allt om Flexbox och hur du använder det för responsiv design.</p>
+            </div>
+
+            <div class="movie-card">
+                <h3>Grid vs Flexbox</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RSIclWvNTdQ" 
+                            title="Grid vs Flexbox" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>En jämförelse mellan CSS Grid och Flexbox - när ska du använda vilket?</p>
+            </div>
+
+            <div class="movie-card">
+                <h3>Advanced CSS Layouts</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/rg7Fvvl3taU" 
+                            title="Advanced CSS Layouts" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Avancerade tekniker för att kombinera Grid och Flexbox i moderna webbapplikationer.</p>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

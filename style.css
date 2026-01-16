@@ -1,0 +1,456 @@
+/***************************************
+
+STYLE.CSS - global styling för webbsidan
+
+****************************************/
+:root {
+   --clr-copy: #000000;   
+
+   --clr-primary: #589fea;               
+   --clr-secondary: #000000;       
+   --clr-cta: rgb(0, 0, 0);         
+   --clr-highlight: rgb(211, 21, 148);   
+
+   --clr-navbar: #fafafa;
+   --clr-dropdown-background: white;    
+
+   --clr-hover: var(--clr-highlight);            
+   --clr-active: var(--clr-dropdown-background); 
+   
+   --clr-line: #010000;            
+
+   --clr-navbar-shadow: 0 4px 12px #000000; 
+
+   --menu-dropdown-size: 1.3rem;  
+   --menu-item-size: 1.15rem;       
+   
+   --border-radius: 0.2rem;      
+   
+   --ff-primary: "Trebuchet MS",sans-serif;
+   --ff-secondary: "Segoe UI", sans-serif;
+    
+}
+
+
+
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 1rem;
+   padding: 1rem;
+
+   background-color: var(--clr-primary);
+
+   min-height: 100vh;
+
+   font-family: var(--ff-secondary);
+   font-size: var(--menu-item-size);
+}
+
+nav {
+   position: sticky;
+   top: 0;
+
+   display: flex;
+   justify-content: start;
+   align-items: center;
+
+   gap: calc(var(--menu-item-size) + 3em);
+   padding: calc(var(--menu-item-size) / 4) calc(var(--menu-item-size) * 2);
+
+   background: var(--clr-navbar);
+   box-shadow: var(--clr-navbar-shadow);
+   border: 0.2rem solid black;
+
+   z-index: 1;
+}
+
+main {
+   display: grid;
+   place-content: center;
+   min-height: 80vh;
+   padding-inline: 1rem;
+   text-align: center;
+}
+
+.Brahms, .content {
+   width: 100%;
+   margin-inline: auto;
+}
+
+.mattias123, .primary-navigation {
+   display: flex;
+   gap: calc(0.5em + var(--menu-item-size));
+
+   padding-inline: 0;
+
+   list-style: none;
+}
+
+.kitkat, .logo-brand {
+   font-size: calc(var(--menu-item-size) * 1.3);
+   font-weight: bold;
+
+   color: var(--clr-cta);
+
+   margin-block: 0;
+}
+
+.Planka, .flex-layout {
+   display: flex;
+   align-items: center;
+   gap: var(--menu-item-size);
+}
+
+
+
+img {
+   display: block;
+
+   max-width: 100%;
+   object-fit: cover;
+   
+   font-style: italic;
+}
+
+.logo {
+   width: calc(var(--menu-item-size) * 1.3);
+}
+
+.logo g path{
+   fill: var(--clr-cta); 
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--ff-primary);
+   font-weight: var(--fw-bold, 700);
+}
+
+p {
+   color: var(--clr-copy);
+}
+
+.italic {
+   font-style: italic;
+}
+
+.bold {
+   font-weight: 700;
+}
+
+
+.hjul {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+   max-width: 100%;
+   margin: 0 auto;
+   padding: 2rem;
+   align-items: start;
+   text-align: left;
+   position: relative;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.about-logo {
+   width: 60px;
+   height: 60px;
+   fill: var(--clr-cta);
+   flex-shrink: 0;
+}
+
+.about-title {
+   margin: 0 0 1rem 0;
+   font-size: 2rem;
+}
+
+.about-title.matthew {
+   display: inline-block; 
+   background: white;
+   padding: 0.4rem 0.8rem;
+   border: 2px solid black;
+   border-radius: 0.4rem;
+   margin-left: 0;      
+}
+/* Oops fixa flex box hos alla uppgift boxes i websidan  */
+.lionel-pessi { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: xx-large;
+
+
+
+}
+
+.mattias123 > li {
+   position: relative;
+}
+
+.nav-link {
+   display: inline-block;
+   padding: 0.35rem 0.2rem;
+   color: var(--clr-secondary);
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 200ms ease, transform 200ms ease;
+}
+
+.nav-link::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -0.2rem;
+   width: 0;
+   height: 2px;
+   background: var(--clr-highlight);
+   transition: width 200ms ease;
+}
+
+.nav-link:hover {
+   color: var(--clr-highlight);
+   transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+   width: 100%;
+}
+
+.dropdown > ul {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   min-width: 13rem;
+   padding: 0.6rem 0;
+   margin: 0;
+   list-style: none;
+   background: var(--clr-dropdown-background);
+   border-radius: var(--border-radius);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(8px);
+   transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+   z-index: 10;
+}
+
+.dropdown ul li {
+   padding: 0.1rem 1.2rem;
+}
+
+.dropdown ul li + li {
+   margin-top: 0.2rem;
+}
+
+.dropdown:hover > ul,
+.dropdown:focus-within > ul {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+}
+
+.show-border {
+   border-top: 1px solid var(--clr-line);
+}
+
+
+
+.hamburger-button {
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+   display: none;
+   
+}
+
+.icon-hamburger .line {
+   transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.icon-hamburger.morphToClose .top {
+   transform: translateY(10px) rotate(45deg);
+}
+
+.icon-hamburger.morphToClose .middle {
+   opacity: 0;
+}
+
+.icon-hamburger.morphToClose .bottom {
+   transform: translateY(-10px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+   nav {
+      justify-content: space-between;
+      padding-inline: 1rem;
+   }
+/* Primarily navvigation måste fixas lKOM IHÅG */
+   .mattias123 {
+      position: absolute;
+      inset: 100% 1rem auto 1rem;
+      flex-direction: column;
+      background: var(--clr-navbar);
+      padding: 0.8rem 1rem 1rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--clr-navbar-shadow);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: max-height 220ms ease, opacity 200ms ease, transform 200ms ease;
+   }
+
+   .mattias123.open {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   .hamburger-button {
+      display: block;
+   }
+
+   .dropdown > ul {
+      position: static;
+      box-shadow: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      padding-left: 0.6rem;
+   }
+}
+
+
+
+.text-1 {
+   text-align: center;
+   font-family: var(--ff-primary);
+   color: #000000;
+   margin-bottom: 2rem;
+   border: 4px solid black;
+   padding: 1.5rem;
+   border-radius: 0.5rem;
+   background-color: #ffffff;
+}
+
+.kort2 {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: left;
+   justify-content: center;
+}
+
+.kort1 {
+   background: white;
+   border-radius: 0.5rem;
+   padding: 1.5rem;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 200ms ease, box-shadow 200ms ease;
+   flex: 1 1 260px;
+   max-width: 360px;
+   display: flex;
+   flex-direction: column;
+   min-height: 400px;
+}
+
+.kort1:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.kort1 img {
+   width: 100%;
+   height: 180px;
+   border-radius: 0.4rem;
+   object-fit: cover;
+   margin-bottom: 0.8rem;
+}
+
+.kort1 h3 {
+   margin-top: 0;
+   color: #000000;
+}
+
+.kort1 p {
+   margin: 0.5rem 0;
+   color: #3a3a3a;
+}
+
+.kort1 a {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 0.5rem 1rem;
+   background: #589fea;
+   color: white;
+   text-decoration: none;
+   border-radius: 0.3rem;
+   transition: background 200ms ease, transform 200ms ease;
+}
+
+.kort1 a:hover {
+   background: #4a7bcd;
+   transform: translateY(-1px);
+}
+
+
+
+.kvadreringsregeln {
+   max-width: 40rem;
+}
+
+.text-2 img {
+   max-width: 100%;
+   border-radius: 0.5rem;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-image-right {
+   float: right;
+   margin-left: 2rem;
+   margin-bottom: 1rem;
+   max-width: 300px;
+}
+
+@media (min-width: 840px) {
+   .about-page {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+   }
+}
+
+
+
+.pessi {
+   max-width: min(260px, 80vw);
+   border-radius: 0.6rem;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+   display: block;
+   margin: 1.5rem auto;
+}
+
+.text-3 {
+   font-size: 1.2rem;
+   color: #555;
+}
+
+.kort3 {
+   border: 2px solid #ccc;
+   padding: 1rem;
+   margin: 0.5rem;
+}
+
+

@@ -1,0 +1,101 @@
+ main {
+
+        .gilip {
+            display: flex;
+            color: red;
+            font-size: 2.5rem;
+            border-color: black;
+            border-width: 0.2rem;
+            border-style: dashed;
+            padding: 2rem;
+            border-style: solid;
+            margin: 2rem;
+            margin-top: 3rem;
+            background-color: rgba(245, 245, 220, 0.783);
+            border-radius: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        .sean_didi_combs {
+
+            display: flex;
+            flex-direction: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            border-color: black;
+            border-width: 0.1rem;
+            border-style: dotted;
+            padding: 2rem;
+            border-style: solid;
+            margin: 2rem;
+            margin-top: 3rem;
+            background-color: rgba(245, 245, 220, 0.338);
+            border-radius: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .shaitan {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+            height: 10rem;
+            padding: 1rem;
+            margin: 1rem;
+            max-width: 100%;
+            border-color: black;
+            border-width: 0.4rem;
+            border-style: double;
+
+
+        }
+
+
+        .img-view{
+            display: flex;
+            flex-direction: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            border-color: black;
+            border-width: 0.1rem;
+            border-style: dotted;
+            padding: 2rem;
+            border-style: solid;
+            margin: 2rem;
+            margin-top: 3rem;
+            background-color: rgba(89, 76, 133, 0.338);
+            border-radius: 1.5rem;
+            align-items: center;
+            justify-content: center;}
+            
+.img-link{
+
+
+            display: flex;
+            flex-direction: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            border-color: black;
+            border-width: 0.1rem;
+            border-style: dotted;
+            padding: 2rem;
+            border-style: solid;
+            margin: 2rem;
+            margin-top: 3rem;
+            background-color: rgba(89, 76, 133, 0.338);
+            border-radius: 1.5rem;
+            align-items: center;
+            justify-content: center;}
+
+
+
+
+}
+
+        

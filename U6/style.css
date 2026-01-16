@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #ff69b4;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+
+.content-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.content-section h2 {
+    color: #555;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.content-section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Inline Link Styling */
+.inline-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #ff69b4;
+    transition: all 0.3s;
+}
+
+.inline-link:hover {
+    color: #ff1493;
+    border-bottom-color: #ff1493;
+}
+
+/* Visual Section */
+.visual-section {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+}
+
+.diagram-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.diagram-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Flexbox Demo */
+.flexbox-demo {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.flex-header {
+    background-color: #5f9ea0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.flex-logo {
+    font-weight: bold;
+}
+
+.flex-menu {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.flex-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5rem;
+}
+
+.flex-sidebar {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.flex-box {
+    background-color: #5f9ea0;
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.flex-box span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.text-box {
+    background-color: white;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.flex-main {
+    background-color: #4682b4;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.flex-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.footer-item {
+    background-color: #4682b4;
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer-item span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.image-box {
+    background-color: white;
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+.flex-bottom {
+    background-color: #5f9ea0;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* CSS Grid Demo */
+.grid-demo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+    min-height: 300px;
+}
+
+.grid-header {
+    grid-column: 1 / -1;
+    background-color: #5f9ea0;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.grid-sidebar {
+    background-color: #5f9ea0;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-main {
+    background-color: #4682b4;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-footer {
+    grid-column: 1 / -1;
+    background-color: #5f9ea0;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* Movies Section - Using CSS Grid */
+.movies-section {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.movies-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.movie-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card h3 {
+    color: #ff69b4;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .main-grid {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .flex-body {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-demo {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-sidebar {
+        grid-column: 1;
+    }
+
+    .content-section h1 {
+        font-size: 1.5rem;
+    }
+}
