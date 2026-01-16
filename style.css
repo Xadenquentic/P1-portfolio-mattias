@@ -419,8 +419,8 @@ font-size: xx-large;
    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.about-image-right {
-   float: right;
+.meimei {
+   float: left;
    margin-left: 2rem;
    margin-bottom: 1rem;
    max-width: 300px;
